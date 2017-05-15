@@ -1,0 +1,131 @@
+<!doctype html>
+<!--
+author: Group 15 [Jasvir & Christian]
+-->
+
+<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Code Fair 2017</title>
+		<meta name="description" content="Code Fair 2017">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+                <h1 id="logo"> <a href="#">Code Fair 2017 logo</a></h1>
+            
+				<div class="topnav" id="myTopnav">
+					<a href="index.html" class="a-active">Home</a>
+					<div class="dropdown">
+						<button class="dropbtn">Code Fair 2017 &#9662;</button>
+						<div class="dropdown-content">
+							<a href="about.html">About</a>
+							<a href="program.html">Program</a>
+							<a href="pastevents.html">Past Events</a>
+						</div>
+					</div>
+					<div class="dropdown2">
+						<button class="dropbtn2" id="submenu">Events &#9662;</button>
+						<div class="dropdown2-content" id="drop">
+							<a href="event1.html">Business Innovation Challenge</a>
+							<a href="event2.html">Coding Competitions</a>
+							<a href="event3.html">Poster Competition</a>
+							<a href="event4.html">Code Hour Workshops</a>
+							<a href="event5.html">Industry Employer Speed Dating</a>
+							<a href="event6.html">Academic Excellence Awards</a>
+						</div>
+					</div>
+					<a href="sponsors.html">Sponsors</a>
+					<a href="gallery.html">Gallery</a>
+					<a href="contact.html">Contact Us</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
+			</div>
+
+			<div class="content">
+             
+                
+				<div class="main__home">
+           <h2>Welcome to Code Fair 2017</h2>
+             <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/cdu%20pic%201.jpg">
+  </div>
+
+                 <div class="mySlides fade">
+<img src="images/itcodefair_logo.png" >
+                 
+
+</div>
+</div>					
+					<p class="home_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div>
+            <h3>Here it comes!</h3>
+             <div id="countdown"></div>
+
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("nov 10, 2017 11:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + ":"
+    + minutes + ":" + seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+        <script>
+            var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500); // Change image every 2 seconds
+}
+        </script>
+			
+			<div class="footer">
+				<div class="footernav">
+					<a href="#" id="footernavleft">Code Fair 2017</a>
+					<a href="#">Events</a>
+					<a href="#">Sponsors</a>
+					<a href="#">Contact Us</a>
+					<a href="#" id="footernavright">CDU Home</a>
+				</div>
+				<p>Copyright &copy 2017</p>
+			</div>
+		
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
